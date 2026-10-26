@@ -1,0 +1,74 @@
+#,Session,User,Page / feature,Action,Observations,Type,Follow-up
+1,S1,standard_user,Login Page,Observed all elements on login page,"Title centered and top: ""Swag Labs""; Fields: username & password; Green ""Login"" button;
+
+List of accepted usernames: standard_user, locked_out_user, problem_user, performance_glitch_user, error_user, visual_user
+
+Password for all users: secret_sauce",Observation,
+2,S1,standard_user,Login Page,Entered valid login credentials (standard_user / secret_sauce),Navigates to https://www.saucedemo.com/inventory.html,Observation,
+3,S1,standard_user,Login Page,Entered incorrect username,"Error thrown - ""Epic sadface: Username and password do not match any user in this service""",Observation,
+4,S1,standard_user,Login Page,Entered incorrect password,"Error thrown - ""Epic sadface: Username and password do not match any user in this service""",Observation,
+5,S1,standard_user,Login Page,Entered incorrect username and password,"Error thrown - ""Epic sadface: Username and password do not match any user in this service""",Observation,
+6,S1,standard_user,Login Page,Left username field blank,"Error thrown - ""Epic sadface: Username is required""",Observation,
+7,S1,standard_user,Login Page,Left password field blank,"Error thrown - ""Epic sadface: Password is required""",Observation,
+8,S1,standard_user,Login Page,Left both username and password fields blank,"Error thrown - ""Epic sadface: Username is required""",Observation,
+9,S1,standard_user,Login Page,Entered only spaces in each input field,"Error thrown - ""Epic sadface: Username and password do not match any user in this service""",Observation,
+10,S1,standard_user,Login Page,Entered valid credentials with a space after the final character,"Error thrown - ""Epic sadface: Username and password do not match any user in this service""",Question,Should the input be trimmed? Many sites trim it.
+11,S1,standard_user,Login Page,Submitted with the enter key and with the mouse select,Both navigate to https://www.saucedemo.com/inventory.html,Observation,
+12,S1,standard_user,Login Page,Refreshed the page,Previously filled username and password fields reset to blank values,Observation,
+13,S1,standard_user,Login Page,Shrink window to phone width (375 x 667),"All elements are still clearly visible, errors thrown are as visible as they are with desktop size",Observation,
+14,S1,standard_user,Login Page,Interacted with each error message,"Incorrect field icons turn red and have an ""X"" to indicate where the error is;
+Can close error field to reset fields to default value.",Observation,
+15,S1,standard_user,Login Page,Attempted username (standard_user) with capitalization: Standard_User,"Error thrown - ""Epic sadface: Username and password do not match any user in this service""",Observation,
+16,S1,standard_user,Login Page,Entered password,"Password is hidden while typing, each character represented as a black dot",Observation,
+17,S1,standard_user,Login Page,Tab through login page,"Able to tab through each item, but need additional clarity of what item is highlighted",Possible bug,Contrast of highlighted items with tab needs to meet accessibility guidelines
+18,S1,standard_user,Product List,Counted products and indicated what each card shows,"6 products present;
+Each product has the item title, brief description, an image, a price, and ""Add to cart"" button",Observation,
+19,S1,standard_user,Product List,"Attempted every sort option, verified the order is correct and not just arbitrarily altered","All four sort options function properly 
+A-Z, 
+Z-A, 
+Price Low - High, 
+Price High - Low",Observation,
+20,S1,standard_user,Product List,"Clicked a product name, then image",Image and product name navigate to the product detail page,Observation,
+21,S1,standard_user,Product List,Add to cart,"The ""Add to cart"" button turns red and changes to ""Remove."" The badge in the top right has a red indicator of how many items are in the cart (1). This number changes with each item added to the cart. You are not able to add duplicate items to the cart.",Question,See 32. How does a customer buy 2 of the same item?
+22,S1,standard_user,Product List,Remove from list page,"Removing item from the inventory page decrements the cart badge, and when the count reaches 0 the badge disappears completely.",Observation,
+23,S1,standard_user,Product List,Clicked every link and icon in header & footer,"Footer icons from left to right: X, Facebook, and LinkedIn. Each navigates to the respective social page for SauceLabs",Observation,
+24,S1,standard_user,Product Detail,"Checked to ensure the name, description, price, and image match the list page","Name, description, price, and image all match the inventory page and the respective product detail page.",Observation,
+25,S1,standard_user,Product Detail,Add and remove from product detail page,"""Add to cart"" increments the badge, ""remove"" decrements the badge; badge disappears at zero.",Observation,
+26,S1,standard_user,Product Detail,"Selected a sort option, clicked on a product detail, then returned to products page",Sort choice is not remembered,Question,Do we want sort choice to persist with page changes?
+27,S1,standard_user,Product Detail,Observed the URL between products and attempted to manually change,Each product has a numerical ID that is present in the URL (0-5). Manually adjusting the value takes the user to the relevant product detail page.,Test idea,"Try IDs -1, 6, and ""abc"". Boundary value analysis, and a likely bug"
+28,S2,standard_user,Cart,Attempted to paste https://www.saucedemo.com/cart.html while logged out,"Unable to access the cart from pasting the URL. Error thrown: ""Epic sadface: You can only access '/cart.html' when you are logged in.""",Observation,
+29,S2,standard_user,Cart,Navigated to the cart with 0 items,"0: Continue shopping button, Checkout button, ""Your Cart"" label, and QTY and Description that are completely blank",Question,Do we want to include a message indicating that the cart is empty for improved UX?
+30,S2,standard_user,Cart,Navigated to the cart with 1 item,"Item is in the cart, with QTY of 1, includes title of product, price and description. Option to remove the item from cart. Continue shopping and Checkout buttons are present as well. QTY label not aligned.",Possible bug,Visual: label should line up with its value
+31,S2,standard_user,Cart,Navigated to the cart with 3 items,"Item is in the cart, each with QTY of 1, includes title of product, price and description. Option to remove items from cart. Continue shopping and Checkout buttons are present as well.",Observation,See 30
+32,S2,standard_user,Cart,Attempted to change quantity of item,Unable to change the quantity of item in the cart menu,Question,See 21. How does a customer buy 2 of the same item?
+33,S2,standard_user,Cart,Remove items from the cart page,Removing items from the cart functions the same way as from the inventory and product details page.,Observation,
+34,S2,standard_user,Cart,"Select ""continue shopping""","Navigates user back to the inventory page, shopping cart remains intact",Observation,
+35,S2,standard_user,Cart,Refresh; log out and back in,Cart remains intact after logging out and logging back in.,Observation,
+36,S2,standard_user,Checkout: Your Info,Observed fields present for checkout,"First Name, Last Name, Zip/Postal Code fields are present, along with Cancel and Continue buttons; 
+All three fields are required to continue;",Observation,
+37,S2,standard_user,Checkout: Your Info,Left each field empty in checkout: your information,"Each field needs to have input in order to continue to the next page. Throws ""Error: X is required"" for each one.",Observation,
+38,S2,standard_user,Checkout: Your Info,Only input spaces into each field,Able to navigate to the next page with spaces only in each field,Possible bug,Spaces-only input is effectively an empty required field
+39,S2,standard_user,Checkout: Your Info,Input 300 characters into each field,Able to navigate to the next page with 300 alphabetical characters in each field,Question,Is this intentional? Do we want unlimited input as a possibility?
+40,S2,standard_user,Checkout: Your Info,Used special characters in each field,Able to navigate to next page with exclusively special characters in each field,Question,Real names contain hyphens and apostrophes. Where should the line be here?
+41,S2,standard_user,Checkout: Your Info,Used numbers in the First Name / Last Name field,Able to navigate to next page with exclusively numbers in the First Name & Last Name field,Possible bug,Numbers should not be valid characters for First Name and Last Name fields
+42,S2,standard_user,Checkout: Your Info,Used letters in the Zip/Postal code field,Able to navigate to next page with exclusively alphabetical characters in the Zip/Postal code field,Question,"International postal codes can contain letters, but this does not verify the validity of postal codes"
+43,S2,standard_user,Checkout: Your Info,Submitted with the enter key and with the mouse select,Both navigate to the Checkout: Overview page,Observation,
+44,S2,standard_user,Checkout: Your Info,Selected cancel,"Navigates back to the cart, the cart remains intact",Question,"See 48. Info page goes back to cart, overview goes back to inventory. Is that intentional?"
+45,S2,standard_user,Checkout: Overview,"Checked accuracy of item total, tax, and total",Items: Backpack ($29.99) + Bike Light ($9.99). Item total shown: $39.98. Tax: $3.20. Total: $43.18.,Observation,
+46,S2,standard_user,Checkout: Overview,Observed charged tax percentage,8% tax charged,Question,Verifying that this is the accurate tax rate we should be charging
+47,S2,standard_user,Checkout: Overview,Observed payment and shipping info presented,"SauceCard #31337 & ""Free Pony Express Delivery"" display here",Observation,
+48,S2,standard_user,Checkout: Overview,Cancel from overview page,"Navigates back to inventory page, cart remains intact",Question,"See 44. Info page goes back to cart, overview goes back to inventory. Is that intentional?"
+49,S2,standard_user,Checkout: Complete,Completed checkout process,"""Thank you for your order!"" plus a kind confirmation message - ""Back Home"" button and ""Generate PDF order"" button. The PDF button downloads a pdf receipt for the customer. Cart is reset to default state after checkout. The PDF is outside the scope of this charter.",Observation,
+50,S2,standard_user,Checkout: Complete,Selected back after finishing,"Selecting back after checking out shows an empty checkout page, showing a total of $0.00 and no items being purchased.",Possible bug,Customers should not be able to reach the checkout page with an empty cart
+51,S2,standard_user,Checkout: Complete,Attempted to checkout with an empty cart,Able to checkout with no items in the cart;,Possible bug,This should not be possible for users.
+52,S2,standard_user,Side Menu,Selected each menu item,"All items: default inventory page;
+Dynamic Catalog - Lazy Load: an infinitely loading screen of all items listed separately, including different sizes for the clothing. The list repeats itself after reaching the end of the available inventory.
+Dynamic Catalog - Spinner: Each item is listed separately and changes dynamically with the screen size, but you cannot click on any of the items
+Dynamic Catalog - Slider: Each item is shown individually, and gradually navigates to the next item. You cannot access the item descriptions or add to cart from here either.",Question,In or out of scope? Decide in the test plan
+53,S2,standard_user,Side Menu,Reset App State with items in cart,"Cart is emptied when clicking Reset App State, but the ""Add to cart"" buttons still show ""Remove."" Refreshing the page remedies this.",Possible bug,The screen no longer matches the actual cart state
+54,S2,standard_user,Side Menu,"Logged out, then pressed the back button","Cannot access the store after logging out - Error thrown: ""Epic sadface: You can only access '/inventory.html' when you are logged in.""",Observation,
+55,S3,locked_out_user,Login Page,Logged in with locked_out_user / secret_sauce,"Error thrown: ""Epic sadface: Sorry, this user has been locked out.""",Observation,
+56,S3,problem_user,Product List,Logged in with problem_user / secret_sauce,All items have the same image of a dog with a tennis ball instead of the relevant product photo,Possible bug,Images should match their respective products
+57,S3,performance_glitch_user,Product List,Logged in with performance_glitch_user / secret_sauce,Navigating to home inventory page takes longer to load than other users,Test idea,Performance testing needed to determine the extent of performance issues
+58,S3,error_user,Checkout: Your Info,Logged in with error_user / secret_sauce,"Cannot input text in the ""Last Name"" field at Checkout: Your Information. Incapable of completing checkout process.",Possible bug,Incapable of completing checkout process.
+59,S3,visual_user,Product List,Logged in with visual_user / secret_sauce,Cart icon is overlapping into the section below it,Possible bug,UI dimensions need adjustments

@@ -1,0 +1,12 @@
+ID,Title,problem_user,error_user,visual_user,performance_glitch_user,Bug ID
+LGN-01,Login with valid credentials,Pass,Pass,Pass,Pass,
+LGN-04,Login with wrong password,Pass,Pass,Pass,Pass,
+PLS-01,Verify inventory list contents,Fail,Pass,Fail,Pass,"ST-17 (problem_user); ST-16, ST-18 (visual_user)"
+CRT-01,Add item to cart,Pass,Pass,Pass,Pass,
+CRT-02,Remove item from inventory page,Fail,Fail,Pass,Pass,"ST-15 (problem_user, error_user)"
+CHK-01,Checkout happy path,Fail,Fail,Pass,Pass,"ST-12 (problem_user); ST-13, ST-14 (error_user)"
+CHK-06,Verify item total calculation,Blocked,Pass,Pass,Pass,Blocked by ST-12 (problem_user)
+CHK-07,Verify total includes tax,Blocked,Pass,Pass,Pass,Blocked by ST-12 (problem_user)
+CHK-09,Attempt checkout with empty cart,Blocked,Fail,Pass,Pass,"Blocked by ST-12 (problem_user); ST-4, ST-13 (error_user)"
+MNU-01,Logout from side menu,Pass,Pass,Pass,Pass,
+MNU-02,Back button after logout,Pass,Pass,Pass,Pass,

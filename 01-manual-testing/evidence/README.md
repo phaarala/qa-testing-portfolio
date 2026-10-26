@@ -1,0 +1,25 @@
+# Evidence
+
+Screenshots and recordings for every failed test. File names match the Evidence column in [test-cases.csv](../test-cases.csv) and [matrix-failures.csv](../matrix-failures.csv).
+
+> **To write:** 11 names in your Evidence columns have no file extension, so they can't be linked. Add the real extension (.png or .mp4) to each one in the spreadsheet and to the file itself, and give the A & B screenshots separate names such as CHK-09_..._A.png and CHK-09_..._B.png. Then upload every file to this folder and delete this note.
+
+| File | Test case | Bug |
+| --- | --- | --- |
+| `LGN-08_Login_Using_Enter_Key.png` | LGN-08 | ST-1 |
+| `CRT-08_QTY_label_lines_up_with_quantity_values` | CRT-08 | ST-2 |
+| `CHK-08_Cancel_from_checkout_overview_A_&_B` | CHK-08 | ST-3 |
+| `CHK-09_Checkout_with_empty_cart_is_rejected_A_&_B` | CHK-09 | ST-4 |
+| `CHK-11_Spaces-only_input_is_rejected` | CHK-11 | ST-5 |
+| `CHK-12_Numbers-only_first_and_last_name_are_rejected` | CHK-12 | ST-6 |
+| `CHK-14_Symbols-only_name_is_rejected` | CHK-14 | ST-7 |
+| `CHK-15_Over=long_input_in_checkout_fields_rejected` | CHK-15 | ST-8 |
+| `CHK-16_Letters-only_postal_code_is_rejected` | CHK-16 | ST-9 |
+| `CHK-17_Back_button_after_completed_order` | CHK-17 | ST-11 |
+| `MNU-03_Reset_App_State_clears_cart` | MNU-03 | ST-10 |
+| `PLS-01_problem_user.png` | PLS-01 (problem_user) | ST-17 |
+| `PLS-01_visual_user.png` | PLS-01 (visual_user) | ST-16, ST-18 |
+| `CRT-02_problem_user` | CRT-02 (problem_user, error_user) | ST-15 |
+| `CHK-01_problem_user.mp4` | CHK-01 (problem_user) | ST-12 |
+| `CHK-01_error_user.mp4` | CHK-01 (error_user) | ST-13, ST-14 |
+| `CHK-09_error_user.png` | CHK-09 (error_user) | ST-4, ST-13 |
