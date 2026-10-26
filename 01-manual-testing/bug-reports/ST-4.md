@@ -1,8 +1,8 @@
-# ST-4: [Area] Summary copied from Jira
+# ST-4: [Checkout] Order completes with an empty cart
 
 | Severity | Priority | Test case | Account | Environment |
 | --- | --- | --- | --- | --- |
-|  |  |  |  | Windows 11 · Chrome 155 · 1920×1080 |
+| High | High | CHK-09 | standard_user | Windows 11 · Chrome 155 · 1920×1080 |
 
 ## Preconditions
 1. Logged in as standard_user
