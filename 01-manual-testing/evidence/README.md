@@ -21,7 +21,7 @@ Screenshots and recordings for every failed test. File names match the Evidence 
 | `MNU-03_Reset_App_State_clears_cart.png` | MNU-03 | ST-10 |
 | `PLS-01_problem_user.png` | PLS-01 (problem_user) | ST-17 |
 | `PLS-01_visual_user.png` | PLS-01 (visual_user) | ST-16, ST-18 |
-| `CRT-02_problem_user.ng` | CRT-02 (problem_user, error_user) | ST-15 |
+| `CRT-02_problem_user.png` | CRT-02 (problem_user, error_user) | ST-15 |
 | `CHK-01_problem_user.mp4` | CHK-01 (problem_user) | ST-12 |
 | `CHK-01_error_user.mp4` | CHK-01 (error_user) | ST-13, ST-14 |
 | `CHK-09_error_user.png` | CHK-09 (error_user) | ST-4, ST-13 |
