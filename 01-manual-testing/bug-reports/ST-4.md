@@ -25,7 +25,8 @@ Checkout proceeds even when the cart is empty. The "Thank you for your order!" c
 
 ## Evidence
 
-![Screenshot description](../evidence/FILE-NAME.png)
+![CHK-09 Empty cart checkout A](../evidence/CHK-09_A_Checkout_with_empty_cart_is_rejected.png.png)
+![CHK-09 Empty cart checkout B](../evidence/CHK-09_B_Checkout_with_empty_cart_is_rejected.png.png)
 
 ## Impact
 Empty orders can be created in the core purchase flow. This could reach order records and fulfillment.
