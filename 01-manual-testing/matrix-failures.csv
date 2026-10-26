@@ -1,7 +1,7 @@
 ID,Account / Browser,Actual Result,Evidence,Bug ID
 PLS-01,problem_user,"6 unique item names and descriptions appear, but all images are the same (dog with a tennis ball)",PLS-01_problem_user.png,ST-17
 PLS-01,visual_user,Sauce Labs backpack contains the same incorrect image as problem_user. Price totals are not equivelant to the price listings on the item description pages.,PLS-01_visual_user.png,"ST-16, ST-18"
-CRT-02,"problem_user, error_user","Selecting the 'remove' icon does not remove the item from the cart, nor does it update the cart badge in the top right",CRT-02_problem_user,ST-15
+CRT-02,"problem_user, error_user","Selecting the 'remove' icon does not remove the item from the cart, nor does it update the cart badge in the top right",CRT-02_problem_user.png,ST-15
 CHK-01,problem_user,"Unable to input any characters in the Last Name field. Entering characters in that field overwrites the first name field instead, with only 1 letter persisting at a time. Cannot navigate to checkout due to this bug. Blocker for CHK-06, 07, and 09.",CHK-01_problem_user.mp4,ST-12
 CHK-01,error_user,"Similar to problem_user error, but can get further through the checkout path. Possible to leave last name blank to continue to checkout, but cannot select finish. Returns a ""503 Service Unavailable"" status code",CHK-01_error_user.mp4,"ST-13, ST-14"
 CHK-09,error_user,"User can reach the Checkout: Overview page with an empty cart. Checkout cannot be completed due to ""503 Service Unavailable"" error when selecting finish, but user should not be able to reach this screen in the first place.",CHK-09_error_user.png,"ST-4, ST-13"
