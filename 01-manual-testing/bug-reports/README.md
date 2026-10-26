@@ -1,6 +1,6 @@
 # Defect Reports
 
-18 defects logged in Jira during manual testing of SauceDemo. Complete reports, with steps to reproduce, expected and actual results, and evidence, are in [jira-export.csv](jira-export.csv).
+18 defects logged in Jira during manual testing of SauceDemo. Complete reports, with steps to reproduce, expected and actual results, and evidence, are in [Jira.csv](Jira.csv).
 
 | Key | Summary | Severity | Priority | Test case(s) | Found with |
 | --- | --- | --- | --- | --- | --- |
