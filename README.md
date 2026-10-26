@@ -1,6 +1,6 @@
 # QA Testing Portfolio
 
-Software testing projects by Paul Haarala: manual testing, SQL, API testing and UI test automation.
+Software testing projects by Paul Haarala: manual testing, SQL, API and UI test automation.
 
 ## Projects
 
