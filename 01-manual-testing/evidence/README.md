@@ -2,8 +2,6 @@
 
 Screenshots and recordings for every failed test. File names match the Evidence column in [test-cases.csv](../test-cases.csv) and [matrix-failures.csv](../matrix-failures.csv).
 
-> **To write:** 11 names in your Evidence columns have no file extension, so they can't be linked. Add the real extension (.png or .mp4) to each one in the spreadsheet and to the file itself, and give the A & B screenshots separate names such as CHK-09_..._A.png and CHK-09_..._B.png. Then upload every file to this folder and delete this note.
-
 | File | Test case | Bug |
 | --- | --- | --- |
 | `LGN-08_Login_Using_Enter_Key.png` | LGN-08 | ST-1 |
