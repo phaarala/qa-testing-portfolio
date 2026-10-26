@@ -24,5 +24,6 @@
 | <a id="st-18"></a>ST-18 | [Product list] Sauce Labs Backpack shows the wrong image for visual_user | Medium | Low | PLS-01 | visual_user |
 
 ## Detailed write-ups
-
-> **To write:** Add your three strongest bugs as Markdown files, using [BUG-TEMPLATE.md](BUG-TEMPLATE.md). Suggested: ST-4 (core flow, every browser), ST-12 (Critical, with video) and ST-11 (found by thinking beyond the script). List them here as links, for example `- [ST-4: Order completes with an empty cart](ST-4.md)`.
+- [ST-4: Order completes with an empty cart](ST-4.md)
+- [ST-12: Typing in Last Name overwrites First Name for problem_user, blocking checkout](ST-12.md)
+- [ST-11: Back button reopens a $0.00 checkout](ST-11.md)
