@@ -4,7 +4,7 @@ Screenshots and recordings for every failed test, listed in bug order. File name
 
 | File | Test case | Bug |
 | --- | --- | --- |
-| [LGN-08_ Login_using_Enter_key.png](LGN-08_%20Login_using_Enter_key.png) | LGN-08 | ST-1 |
+| [LGN-08_Login_using_Enter_key.png](LGN-08_Login_using_Enter_key.png) | LGN-08 | ST-1 |
 | [CRT-08_QTY_label_lines_up_with_quantity_values.png](CRT-08_QTY_label_lines_up_with_quantity_values.png) | CRT-08 | ST-2 |
 | [CHK-08_A_Cancel_from_checkout_overview.png](CHK-08_A_Cancel_from_checkout_overview.png) | CHK-08 | ST-3 |
 | [CHK-08_B_Cancel_from_checkout_overview.png](CHK-08_B_Cancel_from_checkout_overview.png) | CHK-08 | ST-3 |

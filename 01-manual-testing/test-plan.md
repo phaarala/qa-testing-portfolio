@@ -2,7 +2,7 @@
 
 | Author | Version | Date | Status |
 | --- | --- | --- | --- |
-| Paul Haarala | 1.0 | October 20, 2026 | Draft |
+| Paul Haarala | 1.1 | October 27, 2026 | Final |
 
 PDF version: [test-plan.pdf](test-plan.pdf)
 
@@ -39,8 +39,8 @@ Validate SauceDemo's core end-to-end shopping flow: logging in, browsing the inv
 1. Timed exploratory sessions to learn the app's functionality and establish a baseline using standard_user.
 2. Scripted functional test cases covering the happy path, negative testing, edge cases and equivalence partitioning.
 3. Full execution as standard_user in Chrome.
-4. Rerun of the product, cart and checkout cases with the other test accounts.
-5. A cross-browser smoke suite (about 10 high-priority cases) in Chrome, Firefox and Edge, plus phone width in DevTools.
+4. Rerun of the 11 High-priority cases with the four other test accounts.
+5. A cross-browser smoke suite of the same 11 cases in Chrome, Firefox, Edge and a 375×667 phone viewport.
 6. Defects logged in Jira with severity, priority, steps to reproduce and evidence.
 
 ## 4. Test environment
@@ -97,7 +97,7 @@ Validate SauceDemo's core end-to-end shopping flow: logging in, browsing the inv
 | No written requirements                        | Expected results could be wrong         | Use standard_user behavior and common e-commerce conventions; list assumptions; log open questions |
 | Unclear field rules (e.g., postal code format) | Can't call a result pass or fail        | Record it as an assumption; flag it in the summary                                                 |
 | The public demo may change without notice      | Results may not reproduce later         | Record date and browser version on every run; screenshot every failure                             |
-| Single tester, no peer review                  | Blind spots                             | Use checklists and test design techniques; get the plan and cases reviewed                         |
+| Single tester, no peer review                  | Blind spots                             | Use checklists and test design techniques; note it in the summary report                         |
 | Limited time                                   | Not every case can run in every browser | Prioritize High cases; cross-browser runs the smoke suite only                                     |
 
 ## 9. Open questions and assumptions
@@ -107,11 +107,12 @@ Each assumption below sets the expected result used for pass/fail until the ques
 | Log #     | Question                                                                                  | Assumption                                                                                              |
 |------------|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | 10         | Should login trim a trailing space?                                                       | No, so rejecting it counts as a pass.                                                                   |
-| 21 / 32    | How does a customer buy 2 of the same item?                                               | A customer should be able to do this, so it is a potential bug.                                         |
-| 26         | Should the sort choice persist when navigating to other pages?                            | Low priority and does not affect functionality, so not worth the time.                                  |
-| 29         | Should the cart show a message when it is empty?                                          | Adding this would improve UX, accessibility and the look of the empty page.                             |
-| 39         | Should the Checkout: Your Info fields allow unlimited characters?                         | Having no character limit risks memory overload in extreme edge cases.                                  |
+| 21 / 32    | How does a customer buy 2 of the same item?                                               | Not tested (no quantity control); open question.                                         |
+| 26         | Should the sort choice persist when navigating to other pages?                            | Not required, so not tested.                                  |
+| 27         | What if a product URL has an invalid ID?                                                  | A not-found message or redirect is a pass.                                                              |
+| 29         | Should the cart show a message when it is empty?                                          | Not required: a UX suggestion, not a defect.                             |
+| 39         | Should the Checkout: Your Info fields allow unlimited characters?                         | Fields need a maximum length; no limit is a defect.                                  |
 | 40         | Should a name contain only special characters?                                            | Hyphens and apostrophes are valid; a name made only of symbols is not.                                  |
 | 42         | Should postal codes be validated?                                                         | Postal codes should not be purely alphabetical, but letters are possible in international postal codes. |
 | 44 / 48    | Should Cancel on Checkout: Your Info go to the same page as Cancel on Checkout: Overview? | Yes, because it makes the interface predictable.                                                        |
-| 46         | What tax rate should customers be charged?                                                | Business compliance regulations require 8% tax on each purchase.                                        |
+| 46         | What tax rate should customers be charged?                                                | The 8% rate shown at checkout is correct.                                        |

@@ -95,3 +95,17 @@ Five defects ([ST-3](bug-reports/README.md#st-3), [ST-6](bug-reports/README.md#s
 - **Assumption-based expected results:** five defects depend on Test Plan §9 assumptions that no stakeholder has confirmed.
 - **Public demo site:** SauceDemo can change without notice, so results may not reproduce later. Every result records its browser and version, and every failure has evidence.
 - **Single tester:** no peer review of cases or results.
+
+## 8. Recommendation
+
+**Not ready for release.** Testing is complete and met every exit criterion in the test plan. However, those criteria measure how much was tested, not the quality of the product. Four High-priority defects remain open in the core purchase flow.
+
+| Group | Defects | Action |
+| --- | --- | --- |
+| Release blockers (High priority) | [ST-4](bug-reports/README.md#st-4), [ST-12](bug-reports/README.md#st-12), [ST-13](bug-reports/README.md#st-13), [ST-16](bug-reports/README.md#st-16) | Fix and retest before release |
+| Medium priority | [ST-5](bug-reports/README.md#st-5), [ST-9](bug-reports/README.md#st-9), [ST-10](bug-reports/README.md#st-10), [ST-11](bug-reports/README.md#st-11), [ST-14](bug-reports/README.md#st-14), [ST-15](bug-reports/README.md#st-15), [ST-17](bug-reports/README.md#st-17) | Fix in the next cycle. ST-11 can share a fix with ST-4: reject any order with an empty cart. |
+| Low priority | [ST-1](bug-reports/README.md#st-1), [ST-2](bug-reports/README.md#st-2), [ST-3](bug-reports/README.md#st-3), [ST-6](bug-reports/README.md#st-6), [ST-7](bug-reports/README.md#st-7), [ST-8](bug-reports/README.md#st-8), [ST-18](bug-reports/README.md#st-18) | Add to the backlog |
+
+Before fixing the five assumption-based defects (ST-3, ST-6, ST-7, ST-8, ST-9), a product owner should confirm the expected behavior in Test Plan §9.
+
+**Retest scope after fixes:** rerun every failed case, then the 11-case smoke suite across all 4 test accounts and 4 browser configurations.

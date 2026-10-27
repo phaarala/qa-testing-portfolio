@@ -1,7 +1,7 @@
 bug_id,summary,severity,priority
 ST-1,[Login] Cannot login using Enter key unless pressing Tab,Medium,Low
 ST-2,[Cart] QTY label misaligns with quantity numbers in cart,Low,Low
-ST-3,[Checkout] Cancel on Checkout: Overview returns to Inventory instead of Cart,Low,Low
+ST-3,[Checkout] Cancel from Checkout: Overview returns to Inventory instead of Cart,Low,Low
 ST-4,[Checkout] Order completes with an empty cart,High,High
 ST-5,[Checkout] Required fields accept spaces only,High,Medium
 ST-6,[Checkout] Name fields accept numbers-only values,Medium,Low
@@ -13,7 +13,7 @@ ST-11,[Checkout] Back button reopens a $0.00 checkout,High,Medium
 ST-12,"[Checkout] Typing in Last Name overwrites First Name for problem_user, blocking checkout",Critical,High
 ST-13,"[Checkout] Finish returns ""503 Service Unavailable"" for error_user",Critical,High
 ST-14,"[Checkout] Last Name accepts no input for error_user, and a blank Last Name still passes validation",High,Medium
-ST-15,[Cart] Remove on the Inventory page doesn't remove the item or update the badge,Medium,Medium
+ST-15,[Cart] Remove on the Inventory page doesn't remove the item or update the badge for problem_user and error_user,Medium,Medium
 ST-16,[Product list] Inventory prices don't match product detail prices for visual_user,High,High
 ST-17,[Product list] Every product shows the same dog image for problem_user,Medium,Medium
 ST-18,[Product list] Sauce Labs Backpack shows the wrong image for visual_user,Medium,Low

@@ -21,7 +21,7 @@ LGN-07,Both fields empty,Low,Negative,Log #8,Login page open,Chrome 155,1920x108
 2. Click Login",N/A,"Login rejected. Error: ""Epic sadface: Username is required""",As expected,,Pass,
 LGN-08,Login using Enter key,Low,Positive,Log #11,Login page open,Chrome 155,1920x1080 (Desktop),"1. Enter standard_user in Username
 2. Enter secret_sauce in Password
-3. Press Enter (do not click Login)",standard_user / secret_sauce,Inventory page opens,Enter does not direct to the inventory page unless navigating via tab,LGN-08_ Login_using_Enter_key.png,Fail,ST-1
+3. Press Enter (do not click Login)",standard_user / secret_sauce,Inventory page opens,Enter does not direct to the inventory page unless navigating via tab,LGN-08_Login_using_Enter_key.png,Fail,ST-1
 LGN-09,Trailing space after username,Low,Negative,Log #10; Plan §9 #10,Login page open,Chrome 155,1920x1080 (Desktop),"1. Enter ""standard_user "" (one space at the end) in Username
 2. Enter secret_sauce in Password
 3. Click Login",standard_user  (one trailing space) / secret_sauce,"Login rejected. Error: ""Epic sadface: Username and password do not match any user in this service""",As expected,,Pass,
@@ -66,7 +66,7 @@ PDP-04,Add and remove from the detail page,Medium,Positive,Log #25,Logged in as 
 3. Check the cart badge
 4. Click Remove
 5. Check the cart badge",Sauce Labs Backpack,"After step 3: button reads ""Remove"" and badge shows 1. After step 5: button reads ""Add to cart"" and badge is gone",As expected,,Pass,
-PDP-05,Invalid product ID in URL,Medium,Edge,Log #27,Logged in as standard_user; on any product detail page,Chrome 155,1920x1080 (Desktop),"1. In the address bar, change the product ID number at the end of the URL to -1 and press Enter
+PDP-05,Invalid product ID in URL,Medium,Edge,Log #27; Plan §9 #27,Logged in as standard_user; on any product detail page,Chrome 155,1920x1080 (Desktop),"1. In the address bar, change the product ID number at the end of the URL to -1 and press Enter
 2. Repeat with 6
 3. Repeat with abc","IDs: -1, 6, abc","For each ID: a clear ""not found"" message is shown, or the user is returned to the Inventory page. No product page with missing or broken details","For all 3 inputs, user is directed to a an error page saying, ""ITEM NOT FOUND; We're sorry, but your call could not be completed as dialled. Please check your number, and try your call again. If you are in need of assistance, please dial 0 to be connected with an operator. This is a recording. 4 T 1.""",,Pass,
 CRT-01,Add item to cart,High,Positive,Log #21,Logged in as standard_user; cart empty; on Inventory page,Chrome 155,1920x1080 (Desktop),1. Click Add to cart on Sauce Labs Backpack,Sauce Labs Backpack,"Button changes to ""Remove""; cart badge shows 1",As expected,,Pass,

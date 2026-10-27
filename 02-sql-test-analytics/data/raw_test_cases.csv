@@ -20,7 +20,7 @@ PDP-01,Product name matches list page,Medium,Positive,Log #24,Chrome 155,1920x10
 PDP-02,Product price matches list page,Medium,Positive,Log #24,Chrome 155,1920x1080 (Desktop),Pass
 PDP-03,Product image matches list page,Medium,Positive,Log #24,Chrome 155,1920x1080 (Desktop),Pass
 PDP-04,Add and remove from the detail page,Medium,Positive,Log #25,Chrome 155,1920x1080 (Desktop),Pass
-PDP-05,Invalid product ID in URL,Medium,Edge,Log #27,Chrome 155,1920x1080 (Desktop),Pass
+PDP-05,Invalid product ID in URL,Medium,Edge,Log #27; Plan §9 #27,Chrome 155,1920x1080 (Desktop),Pass
 CRT-01,Add item to cart,High,Positive,Log #21,Chrome 155,1920x1080 (Desktop),Pass
 CRT-02,Remove item from inventory page,High,Positive,Log #22,Chrome 155,1920x1080 (Desktop),Pass
 CRT-03,Cart badge updates for multiple items,Medium,Positive,Log #21,Chrome 155,1920x1080 (Desktop),Pass
