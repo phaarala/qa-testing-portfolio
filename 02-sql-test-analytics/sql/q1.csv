@@ -1,0 +1,8 @@
+feature,cases,passed,failed,pass_rate_pct
+Checkout,17,9,8,52.9
+Side menu,4,3,1,75.0
+Cart,8,7,1,87.5
+Login,11,10,1,90.9
+Product detail,5,5,0,100.0
+Product list,6,6,0,100.0
+Session,2,2,0,100.0

@@ -1,0 +1,3 @@
+case_id,title,bug_id,severity,bug_priority
+CHK-09,Checkout with empty cart is rejected,ST-13,Critical,High
+CHK-09,Checkout with empty cart is rejected,ST-4,High,High

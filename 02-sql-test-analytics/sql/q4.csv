@@ -1,0 +1,5 @@
+account,passed,failed,blocked
+problem_user,5,3,3
+error_user,8,3,0
+visual_user,10,1,0
+performance_glitch_user,11,0,0
