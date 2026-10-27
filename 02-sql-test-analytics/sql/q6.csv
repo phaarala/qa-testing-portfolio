@@ -1,0 +1,5 @@
+configuration,passed,failed,blocked
+Chrome 155 1920x1080,10,1,0
+Chrome 155 375x667,10,1,0
+Edge 155 1920x1080,10,1,0
+Firefox 158 1920x1080,10,1,0
