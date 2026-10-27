@@ -1,0 +1,12 @@
+case_id,title,problem_user,error_user,visual_user,performance_glitch_user
+LGN-01,Login with valid standard_user,Pass,Pass,Pass,Pass
+LGN-04,Login with wrong password,Pass,Pass,Pass,Pass
+PLS-01,Verify inventory list contents,Fail,Pass,Fail,Pass
+CRT-01,Add item to cart,Pass,Pass,Pass,Pass
+CRT-02,Remove item from inventory page,Fail,Fail,Pass,Pass
+CHK-01,Checkout happy path,Fail,Fail,Pass,Pass
+CHK-06,Verify item total calculation,Blocked,Pass,Pass,Pass
+CHK-07,Verify total includes tax,Blocked,Pass,Pass,Pass
+CHK-09,Checkout with empty cart is rejected,Blocked,Fail,Pass,Pass
+MNU-01,Logout from side menu,Pass,Pass,Pass,Pass
+MNU-02,Back button after logout,Pass,Pass,Pass,Pass

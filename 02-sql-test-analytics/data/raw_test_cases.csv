@@ -1,0 +1,54 @@
+case_id,title,priority,case_type,source,browser,screen_size,status
+LGN-01,Login with valid standard_user,High,Positive,Log #2,Chrome 155,1920x1080 (Desktop),Pass
+LGN-02,Login with empty username,Medium,Negative,Log #6,Chrome 155,1920x1080 (Desktop),Pass
+LGN-03,Login with empty password,Medium,Negative,Log #7,Chrome 155,1920x1080 (Desktop),Pass
+LGN-04,Login with wrong password,High,Negative,Log #4,Chrome 155,1920x1080 (Desktop),Pass
+LGN-05,Login with invalid username,Medium,Negative,Log #3,Chrome 155,1920x1080 (Desktop),Pass
+LGN-06,Locked out user login,Medium,Negative,Log #55,Chrome 155,1920x1080 (Desktop),Pass
+LGN-07,Both fields empty,Low,Negative,Log #8,Chrome 155,1920x1080 (Desktop),Pass
+LGN-08,Login using Enter key,Low,Positive,Log #11,Chrome 155,1920x1080 (Desktop),Fail
+LGN-09,Trailing space after username,Low,Negative,Log #10; Plan §9 #10,Chrome 155,1920x1080 (Desktop),Pass
+LGN-10,Username is case-sensitive,Low,Negative,Log #15,Chrome 155,1920x1080 (Desktop),Pass
+LGN-11,Keyboard-only login,Low,Positive,Log #17; Plan §2,Chrome 155,1920x1080 (Desktop),Pass
+PLS-01,Verify inventory list contents,High,Positive,Log #18,Chrome 155,1920x1080 (Desktop),Pass
+PLS-02,Sort Name A to Z,Medium,Positive,Log #19,Chrome 155,1920x1080 (Desktop),Pass
+PLS-03,Sort Name Z to A,Medium,Positive,Log #19,Chrome 155,1920x1080 (Desktop),Pass
+PLS-04,Sort Price Low to High,Medium,Positive,Log #19,Chrome 155,1920x1080 (Desktop),Pass
+PLS-05,Sort Price High to Low,Medium,Positive,Log #19,Chrome 155,1920x1080 (Desktop),Pass
+PLS-06,Sort remains accurate after switching options,Low,Edge,Log #19,Chrome 155,1920x1080 (Desktop),Pass
+PDP-01,Product name matches list page,Medium,Positive,Log #24,Chrome 155,1920x1080 (Desktop),Pass
+PDP-02,Product price matches list page,Medium,Positive,Log #24,Chrome 155,1920x1080 (Desktop),Pass
+PDP-03,Product image matches list page,Medium,Positive,Log #24,Chrome 155,1920x1080 (Desktop),Pass
+PDP-04,Add and remove from the detail page,Medium,Positive,Log #25,Chrome 155,1920x1080 (Desktop),Pass
+PDP-05,Invalid product ID in URL,Medium,Edge,Log #27,Chrome 155,1920x1080 (Desktop),Pass
+CRT-01,Add item to cart,High,Positive,Log #21,Chrome 155,1920x1080 (Desktop),Pass
+CRT-02,Remove item from inventory page,High,Positive,Log #22,Chrome 155,1920x1080 (Desktop),Pass
+CRT-03,Cart badge updates for multiple items,Medium,Positive,Log #21,Chrome 155,1920x1080 (Desktop),Pass
+CRT-04,Remove last item removes badge,Low,Edge,Log #22,Chrome 155,1920x1080 (Desktop),Pass
+CRT-05,Cart persists after page reload,Medium,Positive,Log #35,Chrome 155,1920x1080 (Desktop),Pass
+CRT-06,Continue shopping from cart,Medium,Positive,Log #34,Chrome 155,1920x1080 (Desktop),Pass
+CRT-07,Cart kept after logout and login,Medium,Positive,Log #35,Chrome 155,1920x1080 (Desktop),Pass
+CRT-08,QTY label lines up with quantity values,Low,Positive,Log #30,Chrome 155,1920x1080 (Desktop),Fail
+CHK-01,Checkout happy path,High,Positive,Log #49,Chrome 155,1920x1080 (Desktop),Pass
+CHK-02,First name required,Medium,Negative,Log #37,Chrome 155,1920x1080 (Desktop),Pass
+CHK-03,Last name required,Medium,Negative,Log #37,Chrome 155,1920x1080 (Desktop),Pass
+CHK-04,Postal code required,Medium,Negative,Log #37,Chrome 155,1920x1080 (Desktop),Pass
+CHK-05,Cancel from checkout information,Medium,Positive,Log #44; Plan §9 #44/48,Chrome 155,1920x1080 (Desktop),Pass
+CHK-06,Verify item total calculation,High,Positive,Log #45,Chrome 155,1920x1080 (Desktop),Pass
+CHK-07,Verify total includes tax,High,Positive,"Log #45, #46; Plan §9 #46",Chrome 155,1920x1080 (Desktop),Pass
+CHK-08,Cancel from checkout overview,Medium,Positive,Log #48; Plan §9 #44/48,Chrome 155,1920x1080 (Desktop),Fail
+CHK-09,Checkout with empty cart is rejected,High,Negative,Log #51,Chrome 155,1920x1080 (Desktop),Fail
+CHK-11,Spaces-only input is rejected,Medium,Negative,Log #38,Chrome 155,1920x1080 (Desktop),Fail
+CHK-12,Numbers-only first and last name are rejected,Low,Negative,Log #41,Chrome 155,1920x1080 (Desktop),Fail
+CHK-13,Names with apostrophe and hyphen are accepted,Medium,Positive,Plan §9 #40,Chrome 155,1920x1080 (Desktop),Pass
+CHK-14,Symbols-only name is rejected,Low,Negative,Log #40; Plan §9 #40,Chrome 155,1920x1080 (Desktop),Fail
+CHK-15,Over-long input in checkout fields rejected,Low,Edge,Log #39; Plan §9 #39,Chrome 155,1920x1080 (Desktop),Fail
+CHK-16,Letters-only postal code is rejected,Low,Negative,Log #42; Plan §9 #42,Chrome 155,1920x1080 (Desktop),Fail
+CHK-17,Back button after completed order,Medium,Negative,Log #50,Chrome 155,1920x1080 (Desktop),Fail
+CHK-18,PDF receipt matches the order,Low,Positive,Log #49; Plan §2,Chrome 155,1920x1080 (Desktop),Pass
+MNU-01,Logout from side menu,High,Positive,Log #54,Chrome 155,1920x1080 (Desktop),Pass
+MNU-02,Back button after logout,High,Negative,Log #54,Chrome 155,1920x1080 (Desktop),Pass
+MNU-03,Reset App State clears cart,Medium,Positive,Log #53,Chrome 155,1920x1080 (Desktop),Fail
+MNU-04,All Items navigation,Low,Positive,Log #52,Chrome 155,1920x1080 (Desktop),Pass
+SES-01,Cart blocked by direct URL when logged out,Medium,Negative,Log #28,Chrome 155,1920x1080 (Desktop),Pass
+SES-02,Checkout blocked by direct URL when logged out,Medium,Negative,Plan §2 (session behavior),Chrome 155,1920x1080 (Desktop),Pass
