@@ -29,10 +29,13 @@ The results of the [Project 1 manual test cycle](../01-manual-testing/README.md)
 All queries are in [sql/03_queries.sql](sql/03_queries.sql).
 
 ## Findings
-- Checkout feature has the highest failure rate at 52.9%, including the two critical bugs found from the entire test suite and the most distinct bugs out of any other feature.
-- No browser or viewport-specific bugs were found in this testing cycle
-- All defects revealed by test cases have been logged, via the traceability check from Q5
-- problem_user and error_user both fail the smoke-test suite significanty, by design
+
+- **Checkout is the weakest feature.** It has the lowest pass rate (52.9%, 8 of 17 cases failed) and the most distinct bugs (11 of 18), including both Critical bugs. (Q1, Q8)
+- **One High-priority case failed in the full run:** CHK-09 (checkout with an empty cart). It is linked to ST-4, and to ST-13 under error_user. (Q2)
+- **problem_user and error_user cannot complete a purchase.** They failed or were blocked on 6 and 3 of the 11 smoke cases, as the site intends for these test accounts. (Q4)
+- **No browser- or viewport-specific bugs.** Every configuration passed 10 of 11 smoke cases, and the one failure, CHK-09, failed the same way in each. (Q6)
+- **Three test cases found more than one bug.** CHK-01, PLS-01 and CHK-09 account for 8 of the 19 case-to-bug links, because each one failed differently under different accounts. (Q7)
+- **Traceability is complete.** Every failed execution is linked to at least one Jira bug: the Q5 check returns no rows. (Q5)
 
 ## How to rebuild the database
 

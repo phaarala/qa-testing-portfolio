@@ -71,24 +71,29 @@ WHERE e.status = 'Fail'
 
 -- Q6. Smoke-suite results by browser configuration.
 SELECT
-	configuration,
-	SUM(status = 'Pass')	AS passed,
-	SUM(status = 'Fail')	AS failed,
-	SUM(status = 'Blocked') AS blocked
+    configuration,
+    SUM(status = 'Pass')    AS passed,
+    SUM(status = 'Fail')    AS failed,
+    SUM(status = 'Blocked') AS blocked
 FROM executions
 WHERE run_type = 'Browser'
-GROUP BY browser
-ORDER BY passed;
+GROUP BY configuration
+ORDER BY passed, configuration;
 
--- Q7. Test cases linked to more than one bug.
-SELECT case_id, COUNT(case_id) AS defect_count
+-- Q7. Test cases linked to more than one bug, most bugs first.
+SELECT
+    case_id,
+    COUNT(*) AS defect_count
 FROM case_defects
 GROUP BY case_id
-HAVING COUNT(*) > 1;
+HAVING COUNT(*) > 1
+ORDER BY defect_count DESC, case_id;
 
 -- Q8. Number of distinct bugs found in each feature, most first.
-SELECT tc.feature, COUNT(DISTINCT cd.bug_id) AS distinct_bugs
-FROM test_cases as tc
-JOIN case_defects as cd ON tc.case_id = cd.case_id
+SELECT
+    tc.feature,
+    COUNT(DISTINCT cd.bug_id) AS distinct_bugs
+FROM test_cases AS tc
+JOIN case_defects AS cd ON cd.case_id = tc.case_id
 GROUP BY tc.feature
-ORDER BY distinct_bugs DESC;
+ORDER BY distinct_bugs DESC, tc.feature;
