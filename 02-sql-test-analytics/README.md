@@ -29,8 +29,10 @@ The results of the [Project 1 manual test cycle](../01-manual-testing/README.md)
 All queries are in [sql/03_queries.sql](sql/03_queries.sql).
 
 ## Findings
-
-> **To write:** Three or four bullets in your own words on what the results show. For example: which feature is weakest and by how much, what the account runs found that the standard_user run missed, and what the traceability check (Q5) proves.
+- Checkout feature has the highest failure rate at 52.9%, including the two critical bugs found from the entire test suite and the most distinct bugs out of any other feature.
+- No browser or viewport-specific bugs were found in this testing cycle
+- All defects revealed by test cases have been logged, via the traceability check from Q5
+- problem_user and error_user both fail the smoke-test suite significanty, by design
 
 ## How to rebuild the database
 
