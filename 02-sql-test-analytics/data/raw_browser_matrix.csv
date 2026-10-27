@@ -1,0 +1,12 @@
+case_id,title,chrome_desktop,firefox_desktop,edge_desktop,chrome_mobile
+LGN-01,Login with valid credentials,Pass,Pass,Pass,Pass
+LGN-04,Login with wrong password,Pass,Pass,Pass,Pass
+PLS-01,Verify inventory list contents,Pass,Pass,Pass,Pass
+CRT-01,Add item to cart,Pass,Pass,Pass,Pass
+CRT-02,Remove item from inventory page,Pass,Pass,Pass,Pass
+CHK-01,Checkout happy path,Pass,Pass,Pass,Pass
+CHK-06,Verify item total calculation,Pass,Pass,Pass,Pass
+CHK-07,Verify total includes tax,Pass,Pass,Pass,Pass
+CHK-09,Attempt checkout with empty cart,Fail,Fail,Fail,Fail
+MNU-01,Logout from side menu,Pass,Pass,Pass,Pass
+MNU-02,Back button after logout,Pass,Pass,Pass,Pass
