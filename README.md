@@ -8,7 +8,7 @@ Software testing projects by Paul Haarala: manual testing, SQL, API and UI test 
 | --- | --- | --- | --- | --- |
 | 01 | [Manual functional & cross-browser testing](01-manual-testing/README.md) | Exploratory testing, test planning, test case design, execution across accounts and browsers, defect reporting, summary reporting | Google Sheets, Jira, Chrome, Firefox, Edge, DevTools | Complete |
 | 02 | [SQL test analytics](02-sql-test-analytics/README.md) | Test results and defects modeled in a relational database and analyzed with SQL | SQLite, DB Browser for SQLite | Complete |
-| 03 | API testing | Automated API tests: status codes, response data, schemas, authentication | Postman, Newman | Planned |
+| 03 | [API testing](03-api-testing/README.md) | Automated API tests: status codes, response data, schemas, authentication | Postman, Newman | Planned |
 | 04 | UI test automation | Automated end-to-end tests with the Page Object Model, run on every push | Playwright, Python, pytest, GitHub Actions | Planned |
 
 ## Project 1 at a glance
