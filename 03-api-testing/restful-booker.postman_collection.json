@@ -218,7 +218,7 @@
           "response": []
         },
         {
-          "name": "API-06 Update the whole booking",
+          "name": "API-06 Update the whole booking (PUT)",
           "event": [
             {
               "listen": "test",
@@ -261,7 +261,7 @@
           "response": []
         },
         {
-          "name": "API-07 Update one field",
+          "name": "API-07 Update one field (PATCH)",
           "event": [
             {
               "listen": "test",
@@ -410,7 +410,7 @@
               "raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": 200,\r\n    \"depositpaid\": false,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2030-06-02\",\r\n        \"checkout\": \"2030-06-06\"\r\n    },\r\n    \"additionalneeds\": \"Late checkout\"\r\n}",
               "options": {
                 "raw": {
-                  "language": "text"
+                  "language": "json"
                 }
               }
             },
@@ -448,7 +448,7 @@
               "raw": "{\r\n    \"additionalneeds\": \"Dinner\"\r\n}",
               "options": {
                 "raw": {
-                  "language": "text"
+                  "language": "json"
                 }
               }
             },
@@ -592,7 +592,10 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "// Status is 500 for malformed JSON\r\npm.test(\"Status is 500\", () => {\r\n    pm.response.to.have.status(500);\r\n});"
+                  "// Status is 400 for malformed JSON\r",
+                  "pm.test(\"Status is 400\", () => {\r",
+                  "    pm.response.to.have.status(400);\r",
+                  "});"
                 ]
               }
             }
@@ -605,7 +608,7 @@
               "raw": "{\r\n    \"firstname\": \"Broken\",",
               "options": {
                 "raw": {
-                  "language": "text"
+                  "language": "json"
                 }
               }
             },
@@ -627,7 +630,7 @@
       "name": "4 Known defects",
       "item": [
         {
-          "name": "API-16 Wrong password returns 401",
+          "name": "API-16 [RB-1] Wrong password returns 401",
           "event": [
             {
               "listen": "test",
@@ -664,7 +667,7 @@
           "response": []
         },
         {
-          "name": "API-17 Missing lastname returns 400",
+          "name": "API-17 [RB-2] Missing lastname returns 400",
           "event": [
             {
               "listen": "test",
@@ -701,7 +704,7 @@
           "response": []
         },
         {
-          "name": "API-18 Text totalprice is rejected",
+          "name": "API-18 [RB-3] Text totalprice is rejected",
           "event": [
             {
               "listen": "test",
@@ -738,7 +741,7 @@
           "response": []
         },
         {
-          "name": "API-19 Checkout before check-in is rejected",
+          "name": "API-19 [RB-4] Checkout before check-in is rejected",
           "event": [
             {
               "listen": "test",
@@ -775,7 +778,7 @@
           "response": []
         },
         {
-          "name": "API-20 Spaces-only firstname is rejected",
+          "name": "API-20 [RB-5] Spaces-only firstname is rejected",
           "event": [
             {
               "listen": "test",
@@ -812,7 +815,7 @@
           "response": []
         },
         {
-          "name": "API-21 Decimal totalprice is saved exactly",
+          "name": "API-21 [RB-6] Decimal totalprice is saved exactly",
           "event": [
             {
               "listen": "test",
@@ -849,7 +852,7 @@
           "response": []
         },
         {
-          "name": "API-22 PUT on an unknown ID returns 404",
+          "name": "API-22 [RB-7] PUT on an unknown ID returns 404",
           "event": [
             {
               "listen": "test",
@@ -871,10 +874,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "",
+              "raw": "{\r\n    \"firstname\": \"{{firstname}}\",\r\n    \"lastname\": \"{{lastname}}\",\r\n    \"totalprice\": 200,\r\n    \"depositpaid\": false,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2030-06-02\",\r\n        \"checkout\": \"2030-06-06\"\r\n    },\r\n    \"additionalneeds\": \"Late checkout\"\r\n}",
               "options": {
                 "raw": {
-                  "language": "text"
+                  "language": "json"
                 }
               }
             },
@@ -892,7 +895,7 @@
           "response": []
         },
         {
-          "name": "API 23 DELETE on an unknown ID returns 404",
+          "name": "API-23 [RB-8] DELETE on an unknown ID returns 404",
           "event": [
             {
               "listen": "test",
@@ -981,7 +984,7 @@
           "response": []
         },
         {
-          "name": "API-24 Check-in filter includes the boundary date",
+          "name": "API-24 [RB-9] Check-in filter includes the boundary date",
           "event": [
             {
               "listen": "test",
@@ -1082,10 +1085,10 @@
       "listen": "test",
       "script": {
         "exec": [
-          "// Runs after evry request except the health check\r",
+          "// Runs after every request except the health check\r",
           "if (!pm.info.requestName.startsWith(\"API-01\")) {\r",
           "    pm.test(\"Response time is under 3000 ms\", () => {\r",
-          "        pm. expect(pm.response.responseTime).to.be.below(3000);\r",
+          "        pm.expect(pm.response.responseTime).to.be.below(3000);\r",
           "    });\r",
           "}"
         ],
