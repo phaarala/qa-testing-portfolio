@@ -1,0 +1,6 @@
+firstname,lastname,totalprice,depositpaid,checkin,checkout,additionalneeds
+Mary,O'Brien,120,true,2030-07-01,2030-07-03,Breakfast
+Anne-Marie,Dubois,980,false,2030-08-10,2030-08-24,Airport transfer
+José,García,1,true,2030-09-01,2030-09-02,None
+Li,Na,5000,true,2030-12-20,2031-01-03,Late checkout
+Sam,Lee,0,false,2030-10-10,2030-10-11,Crib
