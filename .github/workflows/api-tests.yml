@@ -1,0 +1,54 @@
+name: API tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "03-api-testing/**"
+      - ".github/workflows/api-tests.yml"
+  workflow_dispatch:
+
+jobs:
+  newman:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 03-api-testing
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install Newman
+        run: npm install -g newman newman-reporter-htmlextra
+
+      - name: Run regression suite (folders 1-3)
+        run: >
+          newman run restful-booker.postman_collection.json
+          -e restful-booker.postman_environment.json
+          --folder "1 Health and auth"
+          --folder "2 Booking lifecycle"
+          --folder "3 Negative tests"
+          -r cli,htmlextra
+          --reporter-htmlextra-export reports/ci-regression-report.html
+
+      - name: Run data-driven suite (folder 5)
+        if: always()
+        run: >
+          newman run restful-booker.postman_collection.json
+          -e restful-booker.postman_environment.json
+          --folder "5 Data-driven"
+          -d data/bookings.csv
+          -r cli,htmlextra
+          --reporter-htmlextra-export reports/ci-data-driven-report.html
+
+      - name: Upload the HTML reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: newman-reports
+          path: 03-api-testing/reports/
