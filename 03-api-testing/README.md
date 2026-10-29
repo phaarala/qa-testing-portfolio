@@ -6,7 +6,7 @@ An automated Postman suite that tests every endpoint of the [Restful-Booker](htt
 
 | Tests | Endpoints | Defects logged | Data-driven rows | Runs in CI |
 | --- | --- | --- | --- | --- |
-| 25 | 8 of 8 | 10 | 5 | Yes |
+| 25 | 8 of 8 | 9 | 5 | Yes |
 
 ## What's covered
 
@@ -39,7 +39,7 @@ An automated Postman suite that tests every endpoint of the [Restful-Booker](htt
 | API-12 | DELETE without a token is refused | 3 Negative tests | Pass |
 | API-13 | Unknown booking ID returns 404 | 3 Negative tests | Pass |
 | API-14 | PUT with missing fields is rejected | 3 Negative tests | Pass |
-| API-15 | Malformed JSON returns 400 | 4 Known defects | Fail → RB-10 |
+| API-15 | Malformed JSON is rejected | 3 Negative tests | Pass |
 | API-16 | Wrong password returns 401 | 4 Known defects | Fail → RB-1 |
 | API-17 | Missing lastname returns 400 | 4 Known defects | Fail → RB-2 |
 | API-18 | Text totalprice is rejected | 4 Known defects | Fail → RB-3 |
@@ -53,7 +53,7 @@ An automated Postman suite that tests every endpoint of the [Restful-Booker](htt
 
 ## Defects found
 
-The most serious defects let bad data in without any error. A booking can be saved with a text price (stored as null), with a checkout date before its check-in, or with a decimal price silently cut to a whole number. Several error cases also return the wrong status code: a failed login returns 200, and missing fields or malformed JSON return 500, which reports a client mistake as a server failure. All 10 defects, with severity, priority and the test that found each one, are listed in [bug-reports/README.md](bug-reports/README.md).
+The most serious defects let bad data in without any error. A booking can be saved with a text price (stored as null), with a checkout date before its check-in, or with a decimal price silently cut to a whole number. Several error cases also return the wrong status code: a failed login returns 200, and a booking with a missing field returns 500, which reports a client mistake as a server failure. All 9 defects, with severity, priority and the test that found each one, are listed in [bug-reports/README.md](bug-reports/README.md).
 
 ## Observations (not logged as bugs)
 
@@ -67,7 +67,7 @@ The most serious defects let bad data in without any error. A booking can be sav
 - [Full run report](reports/full-run-report.html): folders 1 to 4
 - [Data-driven run report](reports/data-driven-report.html): folder 5, all 5 rows
 
-GitHub displays HTML files as code; download a report and open it in a browser to view it.
+GitHub displays HTML files as code; download a report and open it in a browser to view it. Every CI run also saves fresh copies of both reports as a downloadable artifact on its run page under the **Actions** tab. The build itself is gated only on folders 1 to 3 and 5, so a red build always means a new problem.
 
 ## How to run it
 

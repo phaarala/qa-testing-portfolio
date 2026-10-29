@@ -46,6 +46,19 @@ jobs:
           -r cli,htmlextra
           --reporter-htmlextra-export reports/ci-data-driven-report.html
 
+      - name: Full run report (folders 1-4, includes known defects; never fails the build)
+        if: always()
+        continue-on-error: true
+        run: >
+          newman run restful-booker.postman_collection.json
+          -e restful-booker.postman_environment.json
+          --folder "1 Health and auth"
+          --folder "2 Booking lifecycle"
+          --folder "3 Negative tests"
+          --folder "4 Known defects"
+          -r cli,htmlextra
+          --reporter-htmlextra-export reports/full-run-report.html
+
       - name: Upload the HTML reports
         if: always()
         uses: actions/upload-artifact@v7
