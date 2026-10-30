@@ -3,6 +3,7 @@ from pages.inventory_page import InventoryPage
 
 NUM_ITEMS = 6
 
+
 def test_pls_01_inventory_shows_six_complete_products(logged_in_page):
     inventory = InventoryPage(logged_in_page)
     expect(inventory.items).to_have_count(NUM_ITEMS)

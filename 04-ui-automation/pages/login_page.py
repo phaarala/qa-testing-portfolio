@@ -9,7 +9,7 @@ class LoginPage:
     def open(self):
         self.page.goto("/")
 
-    def log_in(self, username, password):    
+    def log_in(self, username, password):
         self.username_input.fill(username)
         self.password_input.fill(password)
         self.login_button.click()
