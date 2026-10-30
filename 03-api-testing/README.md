@@ -62,7 +62,7 @@ The most serious defects let bad data in without any error. A booking can be sav
 
 ## Reports
 
-![Full run summary](reports/full-run-summary.png)
+![Full run summary](reports/full-run-report.png)
 
 - [Full run report](reports/full-run-report.html): folders 1 to 4
 - [Data-driven run report](reports/data-driven-report.html): folder 5, all 5 rows
