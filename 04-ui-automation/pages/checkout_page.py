@@ -1,7 +1,7 @@
 class CheckoutPage:
     def __init__(self, page):
         self.page = page
-        
+
         # Checkout: Your information
         self.first_name_input = page.locator('[data-test="firstName"]')
         self.last_name_input = page.locator('[data-test="lastName"]')
