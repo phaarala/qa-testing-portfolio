@@ -1,0 +1,45 @@
+name: UI tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "04-ui-automation/**"
+      - ".github/workflows/ui-tests.yml"
+  workflow_dispatch:
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 04-ui-automation
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install test packages
+        run: pip install -r requirements.txt
+
+      - name: Install browsers
+        run: python -m playwright install --with-deps chromium firefox webkit
+
+      - name: Run the suite in three browsers
+        run: >
+          pytest
+          --browser chromium --browser firefox --browser webkit
+          --html=reports/ci-report.html --self-contained-html
+
+      - name: Upload report, screenshots and traces
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-results
+          path: |
+            04-ui-automation/reports/
+            04-ui-automation/test-results/
