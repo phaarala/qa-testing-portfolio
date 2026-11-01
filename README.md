@@ -2,8 +2,6 @@
 
 [![API tests](https://github.com/phaarala/qa-testing-portfolio/actions/workflows/api-tests.yml/badge.svg)](https://github.com/phaarala/qa-testing-portfolio/actions/workflows/api-tests.yml) [![UI tests](https://github.com/phaarala/qa-testing-portfolio/actions/workflows/ui-tests.yml/badge.svg)](https://github.com/phaarala/qa-testing-portfolio/actions/workflows/ui-tests.yml)
 
-Software testing projects by Paul Haarala: manual testing, SQL, API and UI test automation.
-
 ## Projects
 
 | # | Project | What it shows | Tools | Status |
