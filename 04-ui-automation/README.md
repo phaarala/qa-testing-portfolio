@@ -54,6 +54,8 @@ py -m pytest --browser chromium --browser firefox --browser webkit --html=report
 
 On macOS or Linux, use `python` instead of `py`. Add `--headed --slowmo 500` to watch the tests run in a visible browser.
 
+<img width="212" height="120" alt="Adobe Express - playwright_video" src="https://github.com/user-attachments/assets/67b72e83-e804-4b34-9129-075e1af2a744" />
+
 ## Tools
 
 Python · pytest · Playwright · pytest-html · GitHub Actions
