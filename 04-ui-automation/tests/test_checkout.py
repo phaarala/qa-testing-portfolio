@@ -59,7 +59,7 @@ def test_chk_07_total_includes_tax(logged_in_page):
     expect(checkout.total).to_have_text(TEST_TOTAL)
 
 @pytest.mark.xfail(reason="Known defect ST-4: an order completes with an empty cart", strict=True)    
-def test_check_09_checkout_with_empty_cart_is_rejected(logged_in_page, base_url):
+def test_chk_09_checkout_with_empty_cart_is_rejected(logged_in_page, base_url):
     inventory = InventoryPage(logged_in_page)
     cart = CartPage(logged_in_page)
     checkout = CheckoutPage(logged_in_page)
