@@ -46,4 +46,4 @@ Manual testing of [SauceDemo](https://www.saucedemo.com), a practice e-commerce 
 
 ## Next
 
-The 11 High-priority cases become an automated Playwright suite in a later project in this portfolio.
+The 11 High-priority cases are now an [automated suite](04-ui-automation/README.md) in Playwright.
